@@ -1,0 +1,89 @@
+
+
+
+XFEDOR(1)                 X Version 11                      XFEDOR(1)
+
+   
+
+NAME
+     xfedor - editeur de fontes, de curseurs et d'icones 
+              en couleur pour X11.
+
+SYNOPSIS
+     xfedor [-f fontfile[.bdf]] [-b bitmapfile[.xbm]]
+            [-m mousefiles] [-p pixmapfile[.xpm]] 
+            [-z] [-xy] [-f1 fontname] [-f2 fontname]
+            [-g +x+y] [-d host:display.screen]
+
+DESCRIPTION
+     xfedor est un client X Window System Version 11.
+     xfedor est un editeur de police de caracteres au format 
+     bdf X11 (version BDF 2.1)
+     xfedor peut aussi produire des fichiers bitmap reduits 
+     (128x128) au format X11 (XBM C-like : #define width...)  
+     ou XPM (couleur ascii C-like).
+     xfedor n'utilise pas les fichiers XDefaults.
+
+   
+ARGUMENTS
+        
+     -f fontfile
+         fichier fonte .bdf lu a l'initialisation.
+         (attention : xfedor rajoute .bdf s'il n'y est pas).
+     -b bitmapfile
+         fichier bitmap X11 format "include file C".
+         (priorite aux extensions .xbm)
+     -m mousefile
+         2 fichier bitmap X11, mousefileFore et mousefileMask
+         sont recherches dans $MAP (idem en cours d'execution).
+     -p pixmapfile
+         fichier pixmap couleur format pax (ASCII editable)
+         (priorite aux extensions .xpm)
+     -f1 fontname
+         police utilise dans l'interface
+     -f2 fontname
+         police utilise pour les fonctions souris
+     +x+y
+         origine de la fenetre principale (defaut en 10,10).
+         on ne modifie pas la taille.
+     -z, -xy
+         format Pixmap utilise pour les transferts d'images.
+
+
+VARIABLES SHELL
+      
+      BDF
+        catalogue des fontes bdf lues et ecrites.
+      SOS. (defaut .)
+        catalogue ou xfedor trouve ses fichiers d'aide en 
+        ligne. (defaut /usr/local/lib/X11/xfedor)
+      MAP
+        catalogue pour lire et ecrire les bitmaps curseur 
+        et icone. (defaut .)
+      DISPLAY
+        nom du serveur par defaut.
+      HOME
+        catalogue de l'utilisateur. Utilise pour l'interpreta-
+        tion de ~ dans les noms de fichiers lus ou ecrits.
+        regle : si ca commence par ~, on remplace ~ par $HOME.
+                 
+        si le nom du fichier commance par /, on lit tel quel.
+        sinon on recherche dans $BDF (ou $MAP).
+
+FICHIERS
+    $SOS/*.sos   fichiers d'aide: 
+                 (*.sos, avec * = {BEZIERS,FILL,METRIC,ROTATE,
+                    WRITE,CIRCLE,FONT,NUM,SAVE,CUTAP,GARB,SOS,
+                  RECTANGLE,EDIT,LINE,RESIZE,TRANSLATE,default)
+    $MAP/Fore*   fichiers bitmap pour la source des curseurs.
+    $MAP/Mask*   fichiers bitmap pour le masque des curseurs.
+    $MAP/*.xbm   fichiers bitmap X11 (#define ..)
+    $MAP/*.xpm   fichiers bitmap XPM (format couleur ASCII).
+    $BDF/*.bdf   fichiers police au "Bitmap Distribution Format"
+
+VOIR AUSSI
+      bitmap(X), bdftosnf(X), xsetroot(X).
+
+AUTEURS
+      Daniel DARDAILLER
+

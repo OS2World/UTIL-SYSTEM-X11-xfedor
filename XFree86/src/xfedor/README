@@ -1,0 +1,33 @@
+Sat Nov  7 00:02:59 MET 1998    xfedor-5.0.1
+
+This is a slightly hacked version of xfedor-5.0 from 07/91.
+
+Following things are modified:
+
+    - Support for direct/truecolor displays.
+    - Initial support for the window manager's close button.
+    - SegFault in Rast_Init fixed.
+    - Some minor cleanups.
+
+To do:
+    - The colormap doesn't make much sense on direct and truecolor
+      displays.
+    - Close button not handled at all places.
+    - Some of the tools work ... hmmm ...  strange.
+    - ...
+    - Translate the whole sh^Htuff from french to english :-/
+
+Install:
+    - Check paths in Makefile
+    - make
+    - Test it: SOS=Sosa ./xfedor -f fkp2.bdf
+    - make install
+    - The man page is preformatted.  You have to install it by
+      hand in the right place.
+
+Please look at README.orig for comments from the original
+author (Daniel Dardailler) and note the Copyright (BSD-like).
+
+I added the fixed width sample font fkp2.bdf from ???.
+
+Edgar Toernig, froese@gmx.de

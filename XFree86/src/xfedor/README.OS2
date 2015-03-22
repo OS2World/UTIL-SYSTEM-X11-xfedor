@@ -1,0 +1,21 @@
+This was a quick port of xfedor-5.0.1 to OS/2. You'll need XFree86
+with at least the client libraries installed. Both the XFree86
+Xservers and the PMX Xserver work.
+
+Some actions provoke a coredump. Avoid doing such actions.
+
+For some reason this program has trouble editing characters with
+codepoints highter than 125.
+
+An extra font, tnr12i.bdf, is included.
+
+Feel free to submit any OS/2-specific changes to <jerodd@usa.net>.
+
+You can read the xfedor manual page with xman.
+
+xfedor doesn't know anything about drive letters. Make sure you are
+in the same drive as that to which X11ROOT points when you run
+xfedor.
+
+Joshua E. Rodd
+1999 Mar 02

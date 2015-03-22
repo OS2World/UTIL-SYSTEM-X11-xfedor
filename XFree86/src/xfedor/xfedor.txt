@@ -1,0 +1,28 @@
+                         Upload Information Template for Hobbes.nmsu.edu
+                          ===============================================
+
+        Archive Filename: xfedor-5.0.1-os2
+       Short Description: xfedor-5.0.1-os2 - X font editor for OS/2
+        Long Description: xfedor-5.0.1-os2 - port of xfedor to OS/2
+                          Allows you to edit bitmap fonts with a nice
+                          X11 user interface. It is derived from a program
+                          of xc/contrib written by someone with Groupe
+                          Bull de France.
+
+      Proposed directory
+           for placement: /pub/os2/system/x11
+
+               Your name: Joshua E. Rodd
+           Email address: jerodd@usa.net
+    Program contact name: (same)
+   Program contact email: (same)
+             Program URL: http://iiinet.nws.org:8/xfedor
+
+      Would you like the
+   contact email address
+    included in listings? yes
+
+Operating System/Version: OS/2 Warp 3 and up
+ Additional requirements: TCP/IP, XFree86+EMX (or PMX)
+
+                Replaces: xfedor-5.0.1-os2
